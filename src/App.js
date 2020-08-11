@@ -34,15 +34,15 @@ function App() {
 
   return (
     <div>
-      <Button onClick={handleAddRepository}><FaPlus /> Add</Button>
+      <Button onClick={handleAddRepository}><FaPlus />Adicionar</Button>
       <ul data-testid="repository-list">
         {
           repositories.map(repository => 
             <li key={repository.id}>
               {repository.title}
 
-              <Button variant="danger" onClick={() => handleRemoveRepository(repository.id)}>
-                <FaTrash />
+              <Button type="button" onClick={() => handleRemoveRepository(repository.id)}>
+                <FaTrash /> Remover
               </Button>
             </li>
           )
