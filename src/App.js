@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import { Button } from 'react-bootstrap';
 import { FaTrash, FaPlus } from 'react-icons/fa';
 
@@ -33,15 +34,15 @@ function App() {
 
   return (
     <div>
-      <Button variant="default" onClick={handleAddRepository}><FaPlus /> Add</Button>
+      <Button onClick={handleAddRepository}><FaPlus /> Add</Button>
       <ul data-testid="repository-list">
         {
-          repositories == 0 ? "ops! :)"  : repositories.map(repository => 
+          repositories.map(repository => 
             <li key={repository.id}>
               {repository.title}
 
-              <Button variant="danger" type="button" onClick={() => handleRemoveRepository(repository.id)}>
-                <FaTrash/>
+              <Button variant="danger" onClick={() => handleRemoveRepository(repository.id)}>
+                <FaTrash />
               </Button>
             </li>
           )

@@ -34,6 +34,7 @@ div ul li {
   padding: 10px 25px;
   font: 22px Arial;
   border-bottom: 1px solid #7159c1;
+  border-radius: 5px;
 }
 
 button {
